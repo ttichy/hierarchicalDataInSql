@@ -18,7 +18,7 @@ GO
 -- Description:	
 -- =============================================
 ALTER PROCEDURE [dbo].[DeleteSubtree] 
-	@projectItem int
+	@nodeId int
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -27,7 +27,7 @@ BEGIN
 
 	delete from dbo.nodes_paths
 	where descendant_id IN 
-		(SELECT descendant_id FROM DBO.nodes_paths WHERE ancestor_id=@projectItem)
+		(SELECT descendant_id FROM DBO.nodes_paths WHERE ancestor_id=@nodeId)
 
 
     

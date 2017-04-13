@@ -28,10 +28,10 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	insert into dbo.nodes_paths (ancestor_id,descendant_id)
-		select ancestor_id, @projectItem FROM dbo.nodes_paths
+	insert into dbo.nodes_paths (ancestor_id,descendant_id, pathLength)
+		select ancestor_id, @projectItem, pathLength +1 FROM dbo.nodes_paths
 		where descendant_id=@ancestor
-		UNION ALL SELECT @projectItem,@projectItem
+		UNION ALL SELECT @projectItem,@projectItem, 0
 END
 
 GO
