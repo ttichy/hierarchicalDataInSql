@@ -21,3 +21,7 @@ TESTING
 * start playing: e.g `exec dbo.GetSubTree 1`
 
 
+The idea is that we store nodes using the Closure table approach to model hierarchy. In our case, the node would be a "ProjectItem".
+ProjectItems are either library items, products and containers.
+
+
