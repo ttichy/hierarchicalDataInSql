@@ -18,6 +18,6 @@ TESTING
 * run DeleteSubtree.sql - creates stored procedure for deleting subtrees
 * run GetSubTree.sql - creates stored procedure for getting subtrees
 * run TestData.sql - insert some test data
-* start playing exec dbo.GetSubTree 1
+* start playing: e.g exec dbo.GetSubTree 1
 
 
